@@ -1,0 +1,13 @@
+platform:ios, '8.0' 
+use_frameworks!
+target 'RocUsuallySwift' do
+# Alamofire 网络库
+pod 'Alamofire', '~> 4.0'
+# swift解析json库
+pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON.git' 
+#AutoLayout 库
+pod 'SnapKit', '~> 3.0.2'
+# 网络加载图片 
+pod 'AlamofireImage', '~> 3.0'
+
+end
