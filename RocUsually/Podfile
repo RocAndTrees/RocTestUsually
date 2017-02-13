@@ -1,0 +1,42 @@
+
+platform:ios, '8.0' 
+target 'RocUsually' do
+	pod 'RDVTabBarController', '~> 1.1.9'
+	pod 'AFNetworking', '~> 3.0.0'
+	pod 'Masonry', '~> 0.6.1'
+	pod 'SDWebImage', '~>3.6'
+	pod 'FrameAccessor'
+	pod 'DACircularProgress' ,'~> 2.3.1'
+	pod 'MJRefresh'
+	pod 'MJExtension', '~> 3.0.8'
+	pod 'MBProgressHUD', '~> 0.9.1'
+	pod 'IQKeyboardManager', '~> 3.3.4'
+    pod 'CYLTableViewPlaceHolder'
+    pod 'KINWebBrowser', '~> 1.3.2'
+    pod 'Baidu-Maps-iOS-SDK', '~> 3.0.0'
+#    pod 'BaiduMapKit', '~> 3.2.1'
+
+
+   pod 'PNChart', '~> 0.8.9'
+  pod 'CTMediator', '~> 0.0.3'#casa  组件化 框架 
+  pod 'BeeHive', '~> 1.1.0'#阿里 组件化 框架
+pod 'WeexSDK', :path=>'./sdk/'
+
+end
+
+target 'RocUsuallyTests' do
+    pod 'RDVTabBarController', '~> 1.1.9'
+    pod 'AFNetworking', '~> 3.0.0'
+    pod 'Masonry', '~> 0.6.1'
+    pod 'SDWebImage', '~>3.6'
+    pod 'FrameAccessor'
+    pod 'DACircularProgress' ,'~> 2.3.1'
+    pod 'MJRefresh'
+    pod 'MJExtension', '~> 3.0.8'
+    pod 'MBProgressHUD', '~> 0.9.1'
+    pod 'IQKeyboardManager', '~> 3.3.4'
+    pod 'CYLTableViewPlaceHolder'
+    pod 'STAlertView', '~> 1.0.0'
+
+end
+
