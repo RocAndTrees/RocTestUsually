@@ -124,7 +124,7 @@ extern _Nonnull SEL WXSwizzledSelectorForSelector(_Nonnull SEL selector);
 /**
  * @abstract JSON Decode Mehthod
  *
- * @param JSON String.
+ * @param json String.
  *
  * @return A json object by decoding json string.
  *
@@ -136,7 +136,7 @@ extern _Nonnull SEL WXSwizzledSelectorForSelector(_Nonnull SEL selector);
 /**
  * @abstract JSON Encode Mehthod
  *
- * @param JSON Object.
+ * @param object Object.
  *
  * @return A json string by encoding json object.
  *
@@ -160,7 +160,7 @@ extern _Nonnull SEL WXSwizzledSelectorForSelector(_Nonnull SEL selector);
 /**
  * @abstract JSON Object Copy Mehthod
  *
- * @param JSON Object.
+ * @param object Object.
  *
  * @return A json object by copying.
  *

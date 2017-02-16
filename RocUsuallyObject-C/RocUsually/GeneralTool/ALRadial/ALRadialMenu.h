@@ -73,7 +73,7 @@
  * Asks the delegate if the menu button should rotate when the items appear. Returns YES by default.
  * @return should rotate menu button
  * @param radialMenu the radial menu object making the request
- * @param sender the button that was pressed to initiate the action, the child buttons appear behind this object and animate out
+ * @param button the button that was pressed to initiate the action, the child buttons appear behind this object and animate out
  * @param direction whether to rotate forward or backward
  */
 - (BOOL) radialMenu:(ALRadialMenu *)radialMenu shouldRotateMenuButtonWhenItemsAppear:(UIButton *)button;

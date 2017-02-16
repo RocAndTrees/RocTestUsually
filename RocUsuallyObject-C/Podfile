@@ -15,7 +15,7 @@ target 'RocUsually' do
     pod 'KINWebBrowser', '~> 1.3.2'
     pod 'Baidu-Maps-iOS-SDK', '~> 3.0.0'
 #    pod 'BaiduMapKit', '~> 3.2.1'
-
+pod 'ReactiveCocoa', '~> 5.0.0'
 
    pod 'PNChart', '~> 0.8.9'
   pod 'CTMediator', '~> 0.0.3'#casa  组件化 框架 

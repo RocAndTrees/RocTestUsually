@@ -12,8 +12,6 @@
 #import "XTNetReloader.h"
 #import "WeChatStylePlaceHolder.h"
 
-#define CYLRandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
-
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
@@ -37,14 +35,14 @@
     [super viewDidLoad];
     self.title = @"center";
     self.tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-//    self.view.backgroundColor = [UIColor yellowColor];
     self.dataSource = [NSMutableArray arrayWithObjects:
                        @"PlaceViewController",
                        @"LoginViewController",
                        @"Demo3DTouchViewController"
                        ,@"KINWebBrowserExampleViewController",
                        @"GPSTestViewController",
-                       @"WeexViewController",nil];
+                       @"WeexViewController",
+                       @"ScrollViewAutolayout",nil];
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
@@ -65,12 +63,7 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", @"Random Data", self.dataSource[indexPath.row]];
     return cell;
-    
-    
-    
 }
-
-
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *controllerName = [self.dataSource objectAtIndex:indexPath.row];

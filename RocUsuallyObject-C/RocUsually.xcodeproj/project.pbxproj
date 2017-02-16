@@ -41,6 +41,8 @@
 		C19136071E1DEE9E00ECB4B9 /* GPSTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19136051E1DEE9E00ECB4B9 /* GPSTestViewController.xib */; };
 		C191360B1E1E49D900ECB4B9 /* PxlGpsCLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C191360A1E1E49D900ECB4B9 /* PxlGpsCLConfig.m */; };
 		C19136141E1F3DD600ECB4B9 /* PxlGpsBaiduConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C19136131E1F3DD600ECB4B9 /* PxlGpsBaiduConfig.m */; };
+		C1991F581E528C8400C60DAF /* ScrollViewAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C1991F561E528C8400C60DAF /* ScrollViewAutolayout.m */; };
+		C1991F591E528C8400C60DAF /* ScrollViewAutolayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1991F571E528C8400C60DAF /* ScrollViewAutolayout.xib */; };
 		C1CD4C921E0A253B00EDCAA2 /* RocUsuallyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CD4C911E0A253B00EDCAA2 /* RocUsuallyUITests.m */; };
 		C1CD4CA01E0A254700EDCAA2 /* RocUsuallyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CD4C9F1E0A254700EDCAA2 /* RocUsuallyTests.m */; };
 		C1F37A9F1DF7FB4300EB6E22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F37A9E1DF7FB4300EB6E22 /* main.m */; };
@@ -151,6 +153,9 @@
 		C191360A1E1E49D900ECB4B9 /* PxlGpsCLConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PxlGpsCLConfig.m; path = ../Custom/PxlGpsCLConfig.m; sourceTree = "<group>"; };
 		C19136121E1F3DD600ECB4B9 /* PxlGpsBaiduConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PxlGpsBaiduConfig.h; sourceTree = "<group>"; };
 		C19136131E1F3DD600ECB4B9 /* PxlGpsBaiduConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PxlGpsBaiduConfig.m; sourceTree = "<group>"; };
+		C1991F551E528C8400C60DAF /* ScrollViewAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewAutolayout.h; sourceTree = "<group>"; };
+		C1991F561E528C8400C60DAF /* ScrollViewAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAutolayout.m; sourceTree = "<group>"; };
+		C1991F571E528C8400C60DAF /* ScrollViewAutolayout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewAutolayout.xib; sourceTree = "<group>"; };
 		C1CD4C8F1E0A253B00EDCAA2 /* RocUsuallyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocUsuallyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CD4C911E0A253B00EDCAA2 /* RocUsuallyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RocUsuallyUITests.m; sourceTree = "<group>"; };
 		C1CD4C931E0A253B00EDCAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -455,6 +460,16 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		C1991F541E528C5E00C60DAF /* UIScrollview_autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				C1991F551E528C8400C60DAF /* ScrollViewAutolayout.h */,
+				C1991F561E528C8400C60DAF /* ScrollViewAutolayout.m */,
+				C1991F571E528C8400C60DAF /* ScrollViewAutolayout.xib */,
+			);
+			path = UIScrollview_autolayout;
+			sourceTree = "<group>";
+		};
 		C1CD4C901E0A253B00EDCAA2 /* RocUsuallyUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +587,7 @@
 		C1F37AF41DFA3C3C00EB6E22 /* BusinessClasses */ = {
 			isa = PBXGroup;
 			children = (
+				C1991F541E528C5E00C60DAF /* UIScrollview_autolayout */,
 				C16ECF471E48209E00663CDD /* weex+webController */,
 				C19135F01E1DEE2800ECB4B9 /* GpsManger */,
 				C1478C8F1E15EC13009DD787 /* webView */,
@@ -731,6 +747,7 @@
 			files = (
 				C1F37AAD1DF7FB4300EB6E22 /* LaunchScreen.storyboard in Resources */,
 				C16ECFB11E4846EB00663CDD /* weex@2x.png in Resources */,
+				C1991F591E528C8400C60DAF /* ScrollViewAutolayout.xib in Resources */,
 				C19136071E1DEE9E00ECB4B9 /* GPSTestViewController.xib in Resources */,
 				C1F37AAA1DF7FB4300EB6E22 /* Assets.xcassets in Resources */,
 				C16ECFAF1E4846EB00663CDD /* weex-icon.png in Resources */,
@@ -887,6 +904,7 @@
 				C1F37AD31DFA3BA800EB6E22 /* HTTPManager.m in Sources */,
 				C1F37A9F1DF7FB4300EB6E22 /* main.m in Sources */,
 				C16ECF351E481C1E00663CDD /* AppDelegate+Register.m in Sources */,
+				C1991F581E528C8400C60DAF /* ScrollViewAutolayout.m in Sources */,
 				C16ECF461E481DA800663CDD /* WXSyncTestModule.m in Sources */,
 				C1F37AC51DFA3B1900EB6E22 /* PxlBaseTableViewCell.m in Sources */,
 				C1F37ACB1DFA3B5000EB6E22 /* PxlBaseListTableController.m in Sources */,
