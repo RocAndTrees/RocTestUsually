@@ -14,10 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PxlGpsCLConfig : NSObject
 
 
-
-
-
-
 @property (nonatomic, copy, readonly, nullable) PP_CLSuccessBlock successBlock;
 
 @end

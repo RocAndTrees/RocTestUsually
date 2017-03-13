@@ -17,15 +17,24 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
         button.setTitle("lin", for: .normal)
         button.setTitleColor(UIColor.red, for: .normal)
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        
+        button.frame = CGRect(x: 0, y: 300, width: 100, height: 100)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside);
         
         viewDidAppear1(go: true)
+        
+        
+    }
+    
+    func buttonAction() {
+        print("buttonAction");
+        self.navigationController?.pushViewController(ABCViewController(), animated: true)
     }
     
     func viewDidAppear1(go animated: Bool) {
         super.viewDidAppear(animated)
 
     }
+    
+    
 }
 

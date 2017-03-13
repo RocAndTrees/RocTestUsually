@@ -33,6 +33,9 @@
 
 #import "KINWebBrowserExampleViewController.h"
 
+#import "RocUsually-Bridging-Header.h"
+#import "RocUsually-Swift.h"
+
 
 @interface KINWebBrowserExampleViewController ()
 
@@ -54,7 +57,6 @@ static NSString *const defaultAddress = @"https://www.apple.com";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.title = @"";
     
@@ -75,19 +77,19 @@ static NSString *const defaultAddress = @"https://www.apple.com";
 
 #pragma mark - KINWebBrowserDelegate Protocol Implementation
 
-- (void)webBrowser:(KINWebBrowserViewController *)webBrowser didStartLoadingURL:(NSURL *)URL {
+- (void)webBrowser:(LXWebViewController *)webBrowser didStartLoadingURL:(NSURL *)URL {
     NSLog(@"Started Loading URL : %@", URL);
 }
 
-- (void)webBrowser:(KINWebBrowserViewController *)webBrowser didFinishLoadingURL:(NSURL *)URL {
+- (void)webBrowser:(LXWebViewController *)webBrowser didFinishLoadingURL:(NSURL *)URL {
     NSLog(@"Finished Loading URL : %@", URL);
 }
 
-- (void)webBrowser:(KINWebBrowserViewController *)webBrowser didFailToLoadURL:(NSURL *)URL withError:(NSError *)error {
+- (void)webBrowser:(LXWebViewController *)webBrowser didFailToLoadURL:(NSURL *)URL withError:(NSError *)error {
     NSLog(@"Failed To Load URL : %@ With Error: %@", URL, error);
 }
 
-- (void)webBrowserViewControllerWillDismiss:(KINWebBrowserViewController*)viewController {
+- (void)webBrowserViewControllerWillDismiss:(LXWebViewController*)viewController {
 	NSLog(@"View Controller will dismiss: %@", viewController);
 	
 }
@@ -96,15 +98,17 @@ static NSString *const defaultAddress = @"https://www.apple.com";
 #pragma mark - IBActions
 
 - (IBAction)pushButtonPressed:(id)sender {
-    KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
+    LXWebViewController *webBrowser = [LXWebViewController webBrowser];
     [webBrowser setDelegate:self];
+    webBrowser.title = @"流量送到家";
     [self.navigationController pushViewController:webBrowser animated:YES];
     [webBrowser loadURLString:defaultAddress];
 }
 
+//presentButtonPressed 情况下
 - (IBAction)presentButtonPressed:(id)sender {
-    UINavigationController *webBrowserNavigationController = [KINWebBrowserViewController navigationControllerWithWebBrowser];
-    KINWebBrowserViewController *webBrowser = [webBrowserNavigationController rootWebBrowser];
+    UINavigationController *webBrowserNavigationController = [LXWebViewController navigationControllerWithWebBrowser];
+    LXWebViewController *webBrowser = [webBrowserNavigationController rootWebBrowser];
     [webBrowser setDelegate:self];
     webBrowser.showsURLInNavigationBar = YES;
     webBrowser.tintColor = [UIColor whiteColor];

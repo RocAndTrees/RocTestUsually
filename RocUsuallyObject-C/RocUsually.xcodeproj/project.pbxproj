@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6E60525566EF0DA881350606 /* libPods-RocUsuallyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB87D2F169EDB39C8B433D82 /* libPods-RocUsuallyTests.a */; };
+		C103C50F1E6FD3B00009D38E /* CommonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C103C50E1E6FD3B00009D38E /* CommonWebViewController.m */; };
+		C103C51E1E6FDB940009D38E /* LXWebConfigModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C103C51D1E6FDB940009D38E /* LXWebConfigModule.m */; };
+		C103C5281E6FE2260009D38E /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C103C5211E6FE2260009D38E /* WebViewJavascriptBridge.m */; };
+		C103C5291E6FE2260009D38E /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = C103C5231E6FE2260009D38E /* WebViewJavascriptBridge_JS.m */; };
+		C103C52A1E6FE2260009D38E /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C103C5251E6FE2260009D38E /* WebViewJavascriptBridgeBase.m */; };
+		C103C52B1E6FE2260009D38E /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C103C5271E6FE2260009D38E /* WKWebViewJavascriptBridge.m */; };
 		C11495CE1E090F8500A16423 /* Demo3DTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11495CD1E090F8500A16423 /* Demo3DTouchViewController.m */; };
 		C11495D31E090FAA00A16423 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11495D01E090FAA00A16423 /* SearchViewController.m */; };
 		C11495D41E090FAA00A16423 /* SharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11495D21E090FAA00A16423 /* SharedViewController.m */; };
 		C1478C931E15EC20009DD787 /* KINWebBrowserExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1478C911E15EC20009DD787 /* KINWebBrowserExampleViewController.m */; };
 		C1478C941E15EC20009DD787 /* KINWebBrowserExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1478C921E15EC20009DD787 /* KINWebBrowserExampleViewController.xib */; };
+		C15C4F641E76353B003606FE /* LXSWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C4F631E76353B003606FE /* LXSWebViewController.swift */; };
+		C15C4F661E763738003606FE /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15C4F651E763738003606FE /* test1.swift */; };
 		C16ECF351E481C1E00663CDD /* AppDelegate+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = C16ECF341E481C1E00663CDD /* AppDelegate+Register.m */; };
 		C16ECF3D1E481D9A00663CDD /* WXSelectComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C16ECF3C1E481D9A00663CDD /* WXSelectComponent.m */; };
 		C16ECF401E481DA100663CDD /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C16ECF3F1E481DA100663CDD /* WXImgLoaderDefaultImpl.m */; };
-		C16ECF451E481DA800663CDD /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C16ECF421E481DA800663CDD /* WXEventModule.m */; };
 		C16ECF461E481DA800663CDD /* WXSyncTestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C16ECF441E481DA800663CDD /* WXSyncTestModule.m */; };
 		C16ECF4A1E4820BA00663CDD /* WeexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C16ECF491E4820BA00663CDD /* WeexViewController.m */; };
 		C16ECFAF1E4846EB00663CDD /* weex-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C16ECF4C1E4846EB00663CDD /* weex-icon.png */; };
@@ -27,7 +34,10 @@
 		C17906331E4C53BC00102F5A /* PXRadialMenuComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = C17906321E4C53BB00102F5A /* PXRadialMenuComponet.m */; };
 		C17907991E4C68CD00102F5A /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C17907961E4C68CD00102F5A /* ALRadialButton.m */; };
 		C179079A1E4C68CD00102F5A /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C17907981E4C68CD00102F5A /* ALRadialMenu.m */; };
-		C1853D251E4DB7CF00C0B280 /* bundleJS in Resources */ = {isa = PBXBuildFile; fileRef = C1853D241E4DB7CF00C0B280 /* bundleJS */; };
+		C17D18A81E5A8DA400340127 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D18A71E5A8DA400340127 /* CustomViewController.m */; };
+		C17D18BD1E63B39600340127 /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D18BC1E63B39600340127 /* WXEventModule.m */; };
+		C17D18CD1E63C8B200340127 /* bundleJS in Resources */ = {isa = PBXBuildFile; fileRef = C17D18CC1E63C8B200340127 /* bundleJS */; };
+		C17D18D01E64141800340127 /* WXScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D18CF1E64141800340127 /* WXScannerVC.m */; };
 		C18B7C8B1E00D63D00CFCB25 /* WeChatStylePlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C18B7C871E00D63D00CFCB25 /* WeChatStylePlaceHolder.m */; };
 		C18B7C8C1E00D63D00CFCB25 /* XTNetReloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C18B7C8A1E00D63D00CFCB25 /* XTNetReloader.m */; };
 		C18B7C8F1E00D66800CFCB25 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18B7C8E1E00D66800CFCB25 /* PlaceViewController.m */; };
@@ -64,6 +74,7 @@
 		C1F37B131DFA8BC200EB6E22 /* WFHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F37B0C1DFA8BC200EB6E22 /* WFHudView.m */; };
 		C1F37B141DFA8BC200EB6E22 /* YAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F37B0E1DFA8BC200EB6E22 /* YAlertView.m */; };
 		C1F37B151DFA8BC200EB6E22 /* ZSYPopoverListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F37B101DFA8BC200EB6E22 /* ZSYPopoverListView.m */; };
+		C1FFDD591E6D5DBC0073285A /* LXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FFDD581E6D5DBC0073285A /* LXWebViewController.m */; };
 		E1122F6CEE7734551EAA7441 /* libPods-RocUsually.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F46CBF7B5639CB0F39E115 /* libPods-RocUsually.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +101,18 @@
 		9B924F6DF7E94A3FACC93667 /* Pods-RocUsually.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocUsually.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocUsually/Pods-RocUsually.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F46CBF7B5639CB0F39E115 /* libPods-RocUsually.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RocUsually.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB87D2F169EDB39C8B433D82 /* libPods-RocUsuallyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RocUsuallyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C103C50D1E6FD3B00009D38E /* CommonWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWebViewController.h; sourceTree = "<group>"; };
+		C103C50E1E6FD3B00009D38E /* CommonWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWebViewController.m; sourceTree = "<group>"; };
+		C103C51C1E6FDB940009D38E /* LXWebConfigModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWebConfigModule.h; sourceTree = "<group>"; };
+		C103C51D1E6FDB940009D38E /* LXWebConfigModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWebConfigModule.m; sourceTree = "<group>"; };
+		C103C5201E6FE2260009D38E /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		C103C5211E6FE2260009D38E /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		C103C5221E6FE2260009D38E /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		C103C5231E6FE2260009D38E /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		C103C5241E6FE2260009D38E /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		C103C5251E6FE2260009D38E /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		C103C5261E6FE2260009D38E /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		C103C5271E6FE2260009D38E /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		C11495CC1E090F8500A16423 /* Demo3DTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo3DTouchViewController.h; sourceTree = "<group>"; };
 		C11495CD1E090F8500A16423 /* Demo3DTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo3DTouchViewController.m; sourceTree = "<group>"; };
 		C11495CF1E090FAA00A16423 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -99,14 +122,15 @@
 		C1478C901E15EC20009DD787 /* KINWebBrowserExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KINWebBrowserExampleViewController.h; sourceTree = "<group>"; };
 		C1478C911E15EC20009DD787 /* KINWebBrowserExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KINWebBrowserExampleViewController.m; sourceTree = "<group>"; };
 		C1478C921E15EC20009DD787 /* KINWebBrowserExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KINWebBrowserExampleViewController.xib; sourceTree = "<group>"; };
+		C15C4F621E76353B003606FE /* RocUsually-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocUsually-Bridging-Header.h"; sourceTree = "<group>"; };
+		C15C4F631E76353B003606FE /* LXSWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXSWebViewController.swift; sourceTree = "<group>"; };
+		C15C4F651E763738003606FE /* test1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
 		C16ECF331E481C1E00663CDD /* AppDelegate+Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Register.h"; sourceTree = "<group>"; };
 		C16ECF341E481C1E00663CDD /* AppDelegate+Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Register.m"; sourceTree = "<group>"; };
 		C16ECF3B1E481D9A00663CDD /* WXSelectComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSelectComponent.h; sourceTree = "<group>"; };
 		C16ECF3C1E481D9A00663CDD /* WXSelectComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSelectComponent.m; sourceTree = "<group>"; };
 		C16ECF3E1E481DA100663CDD /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
 		C16ECF3F1E481DA100663CDD /* WXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
-		C16ECF411E481DA800663CDD /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
-		C16ECF421E481DA800663CDD /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
 		C16ECF431E481DA800663CDD /* WXSyncTestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSyncTestModule.h; sourceTree = "<group>"; };
 		C16ECF441E481DA800663CDD /* WXSyncTestModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSyncTestModule.m; sourceTree = "<group>"; };
 		C16ECF481E4820BA00663CDD /* WeexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeexViewController.h; sourceTree = "<group>"; };
@@ -125,7 +149,13 @@
 		C17907961E4C68CD00102F5A /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		C17907971E4C68CD00102F5A /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
 		C17907981E4C68CD00102F5A /* ALRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialMenu.m; sourceTree = "<group>"; };
-		C1853D241E4DB7CF00C0B280 /* bundleJS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleJS; sourceTree = "<group>"; };
+		C17D18A61E5A8DA400340127 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		C17D18A71E5A8DA400340127 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		C17D18BB1E63B39600340127 /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
+		C17D18BC1E63B39600340127 /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
+		C17D18CC1E63C8B200340127 /* bundleJS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundleJS; sourceTree = "<group>"; };
+		C17D18CE1E64141800340127 /* WXScannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXScannerVC.h; sourceTree = "<group>"; };
+		C17D18CF1E64141800340127 /* WXScannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXScannerVC.m; sourceTree = "<group>"; };
 		C18B7C861E00D63D00CFCB25 /* WeChatStylePlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatStylePlaceHolder.h; sourceTree = "<group>"; };
 		C18B7C871E00D63D00CFCB25 /* WeChatStylePlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatStylePlaceHolder.m; sourceTree = "<group>"; };
 		C18B7C891E00D63D00CFCB25 /* XTNetReloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNetReloader.h; sourceTree = "<group>"; };
@@ -200,6 +230,8 @@
 		C1F37B0E1DFA8BC200EB6E22 /* YAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAlertView.m; sourceTree = "<group>"; };
 		C1F37B0F1DFA8BC200EB6E22 /* ZSYPopoverListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSYPopoverListView.h; sourceTree = "<group>"; };
 		C1F37B101DFA8BC200EB6E22 /* ZSYPopoverListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSYPopoverListView.m; sourceTree = "<group>"; };
+		C1FFDD571E6D5DBC0073285A /* LXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWebViewController.h; sourceTree = "<group>"; };
+		C1FFDD581E6D5DBC0073285A /* LXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWebViewController.m; sourceTree = "<group>"; };
 		E25512C59241E149FC027FEB /* Pods-RocUsuallyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocUsuallyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocUsuallyTests/Pods-RocUsuallyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +282,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C103C51F1E6FE2260009D38E /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				C103C5201E6FE2260009D38E /* WebViewJavascriptBridge.h */,
+				C103C5211E6FE2260009D38E /* WebViewJavascriptBridge.m */,
+				C103C5221E6FE2260009D38E /* WebViewJavascriptBridge_JS.h */,
+				C103C5231E6FE2260009D38E /* WebViewJavascriptBridge_JS.m */,
+				C103C5241E6FE2260009D38E /* WebViewJavascriptBridgeBase.h */,
+				C103C5251E6FE2260009D38E /* WebViewJavascriptBridgeBase.m */,
+				C103C5261E6FE2260009D38E /* WKWebViewJavascriptBridge.h */,
+				C103C5271E6FE2260009D38E /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 		C11495CB1E090F6900A16423 /* 3DTouch */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +313,10 @@
 		C1478C8F1E15EC13009DD787 /* webView */ = {
 			isa = PBXGroup;
 			children = (
+				C103C51F1E6FE2260009D38E /* WebViewJavascriptBridge */,
+				C103C50D1E6FD3B00009D38E /* CommonWebViewController.h */,
+				C103C50E1E6FD3B00009D38E /* CommonWebViewController.m */,
+				C1FFDD561E6D5D280073285A /* WebControllerModule */,
 				C1478C901E15EC20009DD787 /* KINWebBrowserExampleViewController.h */,
 				C1478C911E15EC20009DD787 /* KINWebBrowserExampleViewController.m */,
 				C1478C921E15EC20009DD787 /* KINWebBrowserExampleViewController.xib */,
@@ -312,8 +363,6 @@
 		C16ECF3A1E481D8E00663CDD /* module */ = {
 			isa = PBXGroup;
 			children = (
-				C16ECF411E481DA800663CDD /* WXEventModule.h */,
-				C16ECF421E481DA800663CDD /* WXEventModule.m */,
 				C16ECF431E481DA800663CDD /* WXSyncTestModule.h */,
 				C16ECF441E481DA800663CDD /* WXSyncTestModule.m */,
 			);
@@ -330,6 +379,8 @@
 				C16ECF491E4820BA00663CDD /* WeexViewController.m */,
 				C17906311E4C53BB00102F5A /* PXRadialMenuComponet.h */,
 				C17906321E4C53BB00102F5A /* PXRadialMenuComponet.m */,
+				C17D18CE1E64141800340127 /* WXScannerVC.h */,
+				C17D18CF1E64141800340127 /* WXScannerVC.m */,
 			);
 			path = "weex+webController";
 			sourceTree = "<group>";
@@ -347,6 +398,8 @@
 		C16ED01E1E49696C00663CDD /* module */ = {
 			isa = PBXGroup;
 			children = (
+				C17D18BB1E63B39600340127 /* WXEventModule.h */,
+				C17D18BC1E63B39600340127 /* WXEventModule.m */,
 				C16ED01F1E4969A000663CDD /* PXWeexEventModule.h */,
 				C16ED0201E4969A000663CDD /* PXWeexEventModule.m */,
 			);
@@ -362,6 +415,15 @@
 				C17907981E4C68CD00102F5A /* ALRadialMenu.m */,
 			);
 			path = ALRadial;
+			sourceTree = "<group>";
+		};
+		C17D18A01E5A772F00340127 /* CustomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C17D18A61E5A8DA400340127 /* CustomViewController.h */,
+				C17D18A71E5A8DA400340127 /* CustomViewController.m */,
+			);
+			path = CustomViewController;
 			sourceTree = "<group>";
 		};
 		C18B7C831E00D62900CFCB25 /* PlaceHolderController */ = {
@@ -513,7 +575,7 @@
 		C1F37A9C1DF7FB4300EB6E22 /* RocUsually */ = {
 			isa = PBXGroup;
 			children = (
-				C1853D241E4DB7CF00C0B280 /* bundleJS */,
+				C17D18CC1E63C8B200340127 /* bundleJS */,
 				C16ECF4B1E4846E300663CDD /* resource */,
 				C1F37AF41DFA3C3C00EB6E22 /* BusinessClasses */,
 				C1F37AB91DFA3A5F00EB6E22 /* GeneralTool */,
@@ -587,6 +649,7 @@
 		C1F37AF41DFA3C3C00EB6E22 /* BusinessClasses */ = {
 			isa = PBXGroup;
 			children = (
+				C17D18A01E5A772F00340127 /* CustomViewController */,
 				C1991F541E528C5E00C60DAF /* UIScrollview_autolayout */,
 				C16ECF471E48209E00663CDD /* weex+webController */,
 				C19135F01E1DEE2800ECB4B9 /* GpsManger */,
@@ -614,6 +677,20 @@
 				C1F37B101DFA8BC200EB6E22 /* ZSYPopoverListView.m */,
 			);
 			path = XPView;
+			sourceTree = "<group>";
+		};
+		C1FFDD561E6D5D280073285A /* WebControllerModule */ = {
+			isa = PBXGroup;
+			children = (
+				C1FFDD571E6D5DBC0073285A /* LXWebViewController.h */,
+				C1FFDD581E6D5DBC0073285A /* LXWebViewController.m */,
+				C103C51C1E6FDB940009D38E /* LXWebConfigModule.h */,
+				C103C51D1E6FDB940009D38E /* LXWebConfigModule.m */,
+				C15C4F631E76353B003606FE /* LXSWebViewController.swift */,
+				C15C4F621E76353B003606FE /* RocUsually-Bridging-Header.h */,
+				C15C4F651E763738003606FE /* test1.swift */,
+			);
+			path = WebControllerModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -702,6 +779,7 @@
 					C1F37A991DF7FB4300EB6E22 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = QD82P77WSG;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -746,6 +824,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F37AAD1DF7FB4300EB6E22 /* LaunchScreen.storyboard in Resources */,
+				C17D18CD1E63C8B200340127 /* bundleJS in Resources */,
 				C16ECFB11E4846EB00663CDD /* weex@2x.png in Resources */,
 				C1991F591E528C8400C60DAF /* ScrollViewAutolayout.xib in Resources */,
 				C19136071E1DEE9E00ECB4B9 /* GPSTestViewController.xib in Resources */,
@@ -754,7 +833,6 @@
 				C1478C941E15EC20009DD787 /* KINWebBrowserExampleViewController.xib in Resources */,
 				C1F37AA81DF7FB4300EB6E22 /* Main.storyboard in Resources */,
 				C16ECFB01E4846EB00663CDD /* weex.png in Resources */,
-				C1853D251E4DB7CF00C0B280 /* bundleJS in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,19 +962,23 @@
 				C19136141E1F3DD600ECB4B9 /* PxlGpsBaiduConfig.m in Sources */,
 				C1F37B141DFA8BC200EB6E22 /* YAlertView.m in Sources */,
 				C1F37AD41DFA3BA800EB6E22 /* Reachability.m in Sources */,
+				C103C50F1E6FD3B00009D38E /* CommonWebViewController.m in Sources */,
 				C16ECF3D1E481D9A00663CDD /* WXSelectComponent.m in Sources */,
 				C1F37B111DFA8BC200EB6E22 /* DIYGuideView.m in Sources */,
 				C18B7C8F1E00D66800CFCB25 /* PlaceViewController.m in Sources */,
+				C17D18BD1E63B39600340127 /* WXEventModule.m in Sources */,
 				C1F37AC11DFA3B0E00EB6E22 /* PxlButton.m in Sources */,
 				C17906331E4C53BC00102F5A /* PXRadialMenuComponet.m in Sources */,
 				C18B7C9D1E0270D500CFCB25 /* LYButton.m in Sources */,
 				C18B7C9B1E0270D500CFCB25 /* FourPingTransition.m in Sources */,
+				C17D18D01E64141800340127 /* WXScannerVC.m in Sources */,
 				C19136061E1DEE9E00ECB4B9 /* GPSTestViewController.m in Sources */,
 				C191360B1E1E49D900ECB4B9 /* PxlGpsCLConfig.m in Sources */,
 				C1F37B151DFA8BC200EB6E22 /* ZSYPopoverListView.m in Sources */,
 				C1F37B121DFA8BC200EB6E22 /* SeparatorHelper.m in Sources */,
 				C11495D31E090FAA00A16423 /* SearchViewController.m in Sources */,
 				C16ED0121E484DF700663CDD /* WXDemoViewController.m in Sources */,
+				C103C5291E6FE2260009D38E /* WebViewJavascriptBridge_JS.m in Sources */,
 				C18B7C9F1E0270D500CFCB25 /* NextViewController.m in Sources */,
 				C1F37B131DFA8BC200EB6E22 /* WFHudView.m in Sources */,
 				C179079A1E4C68CD00102F5A /* ALRadialMenu.m in Sources */,
@@ -905,19 +987,26 @@
 				C1F37A9F1DF7FB4300EB6E22 /* main.m in Sources */,
 				C16ECF351E481C1E00663CDD /* AppDelegate+Register.m in Sources */,
 				C1991F581E528C8400C60DAF /* ScrollViewAutolayout.m in Sources */,
+				C17D18A81E5A8DA400340127 /* CustomViewController.m in Sources */,
+				C103C52B1E6FE2260009D38E /* WKWebViewJavascriptBridge.m in Sources */,
+				C15C4F641E76353B003606FE /* LXSWebViewController.swift in Sources */,
 				C16ECF461E481DA800663CDD /* WXSyncTestModule.m in Sources */,
 				C1F37AC51DFA3B1900EB6E22 /* PxlBaseTableViewCell.m in Sources */,
 				C1F37ACB1DFA3B5000EB6E22 /* PxlBaseListTableController.m in Sources */,
 				C1F37AC81DFA3B4800EB6E22 /* PxlBaseViewController.m in Sources */,
+				C103C52A1E6FE2260009D38E /* WebViewJavascriptBridgeBase.m in Sources */,
 				C17907991E4C68CD00102F5A /* ALRadialButton.m in Sources */,
+				C1FFDD591E6D5DBC0073285A /* LXWebViewController.m in Sources */,
+				C103C51E1E6FDB940009D38E /* LXWebConfigModule.m in Sources */,
 				C18B7C9C1E0270D500CFCB25 /* LYTextField.m in Sources */,
 				C1478C931E15EC20009DD787 /* KINWebBrowserExampleViewController.m in Sources */,
 				C16ECF4A1E4820BA00663CDD /* WeexViewController.m in Sources */,
 				C16ECF401E481DA100663CDD /* WXImgLoaderDefaultImpl.m in Sources */,
-				C16ECF451E481DA800663CDD /* WXEventModule.m in Sources */,
 				C18B7C8B1E00D63D00CFCB25 /* WeChatStylePlaceHolder.m in Sources */,
 				C18B7C8C1E00D63D00CFCB25 /* XTNetReloader.m in Sources */,
+				C15C4F661E763738003606FE /* test1.swift in Sources */,
 				C16ED0211E4969A000663CDD /* PXWeexEventModule.m in Sources */,
+				C103C5281E6FE2260009D38E /* WebViewJavascriptBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +1048,7 @@
 		C1CD4C961E0A253B00EDCAA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
 				INFOPLIST_FILE = RocUsuallyUITests/Info.plist;
@@ -973,6 +1063,7 @@
 		C1CD4C971E0A253B00EDCAA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
 				INFOPLIST_FILE = RocUsuallyUITests/Info.plist;
@@ -988,6 +1079,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 507984D367DA6D14236BF477 /* Pods-RocUsuallyTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
@@ -1010,6 +1102,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E25512C59241E149FC027FEB /* Pods-RocUsuallyTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
@@ -1123,12 +1216,18 @@
 			baseConfigurationReference = 9B924F6DF7E94A3FACC93667 /* Pods-RocUsually.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RocUsually/PrefixHeader.pch";
 				INFOPLIST_FILE = RocUsually/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rocfly.PxlTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocUsually/BusinessClasses/webView/WebControllerModule/RocUsually-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1137,12 +1236,17 @@
 			baseConfigurationReference = 13580DEEC089D24FF3370358 /* Pods-RocUsually.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RocUsually/PrefixHeader.pch";
 				INFOPLIST_FILE = RocUsually/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rocfly.PxlTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocUsually/BusinessClasses/webView/WebControllerModule/RocUsually-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -30,6 +30,14 @@
 
 @implementation RocUsuallyTests
 
+-(void)testUrl{
+    NSURL *URL = [NSURL URLWithString:@"htt://baidu.com"];
+    NSSet *validSchemes = [NSSet setWithArray:@[@"http", @"https"]];
+    NSLog(@"%d",![validSchemes containsObject:URL.scheme]);
+
+}
+
+
 -(void)testRequest{
         // 1.获得请求管理者
 //        AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];

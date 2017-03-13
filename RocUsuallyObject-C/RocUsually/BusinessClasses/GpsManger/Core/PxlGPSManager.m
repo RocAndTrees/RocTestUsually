@@ -171,9 +171,7 @@ static PxlGPSManager  *_instance;
     
     
     [_locService startUserLocationService];
-    
-    
-    
+
     return 0;
 }
 

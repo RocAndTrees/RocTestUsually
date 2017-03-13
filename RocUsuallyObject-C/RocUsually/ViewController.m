@@ -42,7 +42,9 @@
                        ,@"KINWebBrowserExampleViewController",
                        @"GPSTestViewController",
                        @"WeexViewController",
-                       @"ScrollViewAutolayout",nil];
+                       @"ScrollViewAutolayout",
+                       @"CustomViewController",nil];
+    
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }

@@ -9,6 +9,7 @@
 #import "WXSyncTestModule.h"
 
 @implementation WXSyncTestModule
+@synthesize weexInstance;
 
 WX_EXPORT_METHOD_SYNC(@selector(getString))
 WX_EXPORT_METHOD_SYNC(@selector(getNumber))
@@ -22,7 +23,11 @@ WX_EXPORT_METHOD_SYNC(@selector(getObject))
 
 - (NSUInteger)getNumber
 {
-    return 111111;
+    NSDictionary * dic = @{@"12":@"34"};
+    //传一个dic到weex
+    [weexInstance fireGlobalEvent:@"toast" params:dic];
+
+    return arc4random() % 3;
 }
 
 - (NSArray *)getArray

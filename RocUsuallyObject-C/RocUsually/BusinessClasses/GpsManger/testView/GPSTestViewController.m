@@ -7,7 +7,8 @@
 //
 
 #import "GPSTestViewController.h"
-#import "PxlGPSHeader.h"
+//#import "PxlGPSHeader.h"
+//#import <LXGpsManager/UIColor+Fetch.h>
 @interface GPSTestViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *showDataLabel;

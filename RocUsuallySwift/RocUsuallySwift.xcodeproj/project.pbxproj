@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C17D18D41E654E0A00340127 /* ABCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D18D31E654E0A00340127 /* ABCViewController.m */; };
+		C17D18D61E65515C00340127 /* BCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D18D51E65515C00340127 /* BCDViewController.swift */; };
 		C18B7CAD1E027B8900CFCB25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18B7CAC1E027B8900CFCB25 /* AppDelegate.swift */; };
 		C18B7CAF1E027B8900CFCB25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18B7CAE1E027B8900CFCB25 /* ViewController.swift */; };
 		C18B7CB21E027B8900CFCB25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CB01E027B8900CFCB25 /* Main.storyboard */; };
 		C18B7CB41E027B8900CFCB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CB31E027B8900CFCB25 /* Assets.xcassets */; };
 		C18B7CB71E027B8900CFCB25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CB51E027B8900CFCB25 /* LaunchScreen.storyboard */; };
-		C18B7CC41E027C9D00CFCB25 /* Describe in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CC31E027C9D00CFCB25 /* Describe */; };
 		F425DC1488C8ED8F9E5A8552 /* Pods_RocUsuallySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8463C2DE5F16054C8D010DF6 /* Pods_RocUsuallySwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D145940C13C04F596B95091 /* Pods-RocUsuallySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocUsuallySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocUsuallySwift/Pods-RocUsuallySwift.release.xcconfig"; sourceTree = "<group>"; };
 		8463C2DE5F16054C8D010DF6 /* Pods_RocUsuallySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocUsuallySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C17D18D11E654E0900340127 /* RocUsuallySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocUsuallySwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		C17D18D21E654E0A00340127 /* ABCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCViewController.h; sourceTree = "<group>"; };
+		C17D18D31E654E0A00340127 /* ABCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCViewController.m; sourceTree = "<group>"; };
+		C17D18D51E65515C00340127 /* BCDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCDViewController.swift; sourceTree = "<group>"; };
 		C18B7CA91E027B8900CFCB25 /* RocUsuallySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocUsuallySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18B7CAC1E027B8900CFCB25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C18B7CAE1E027B8900CFCB25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +31,6 @@
 		C18B7CB31E027B8900CFCB25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C18B7CB61E027B8900CFCB25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C18B7CB81E027B8900CFCB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C18B7CC31E027C9D00CFCB25 /* Describe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Describe; sourceTree = "<group>"; };
 		CDFD5A51058ED1BF865F2709 /* Pods-RocUsuallySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocUsuallySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocUsuallySwift/Pods-RocUsuallySwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,12 +77,15 @@
 			children = (
 				C18B7CAC1E027B8900CFCB25 /* AppDelegate.swift */,
 				C18B7CAE1E027B8900CFCB25 /* ViewController.swift */,
+				C17D18D51E65515C00340127 /* BCDViewController.swift */,
+				C17D18D21E654E0A00340127 /* ABCViewController.h */,
+				C17D18D31E654E0A00340127 /* ABCViewController.m */,
 				C18B7CB01E027B8900CFCB25 /* Main.storyboard */,
 				C18B7CB31E027B8900CFCB25 /* Assets.xcassets */,
 				C18B7CB51E027B8900CFCB25 /* LaunchScreen.storyboard */,
 				C18B7CB81E027B8900CFCB25 /* Info.plist */,
-				C18B7CC31E027C9D00CFCB25 /* Describe */,
 				C18B7CC61E028BD500CFCB25 /* swiftStudy */,
+				C17D18D11E654E0900340127 /* RocUsuallySwift-Bridging-Header.h */,
 			);
 			path = RocUsuallySwift;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 					C18B7CA81E027B8900CFCB25 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = QD82P77WSG;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -163,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18B7CB71E027B8900CFCB25 /* LaunchScreen.storyboard in Resources */,
-				C18B7CC41E027C9D00CFCB25 /* Describe in Resources */,
 				C18B7CB41E027B8900CFCB25 /* Assets.xcassets in Resources */,
 				C18B7CB21E027B8900CFCB25 /* Main.storyboard in Resources */,
 			);
@@ -226,6 +233,8 @@
 			files = (
 				C18B7CAF1E027B8900CFCB25 /* ViewController.swift in Sources */,
 				C18B7CAD1E027B8900CFCB25 /* AppDelegate.swift in Sources */,
+				C17D18D61E65515C00340127 /* BCDViewController.swift in Sources */,
+				C17D18D41E654E0A00340127 /* ABCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +284,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -294,6 +304,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = RocUsuallySwift;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -324,6 +335,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -336,6 +348,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = RocUsuallySwift;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -347,11 +360,16 @@
 			baseConfigurationReference = CDFD5A51058ED1BF865F2709 /* Pods-RocUsuallySwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
 				INFOPLIST_FILE = RocUsuallySwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rocfly.RocUsuallySwift;
+				PRODUCT_MODULE_NAME = RocUsuallySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocUsuallySwift/RocUsuallySwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -361,11 +379,15 @@
 			baseConfigurationReference = 0D145940C13C04F596B95091 /* Pods-RocUsuallySwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QD82P77WSG;
 				INFOPLIST_FILE = RocUsuallySwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rocfly.RocUsuallySwift;
+				PRODUCT_MODULE_NAME = RocUsuallySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocUsuallySwift/RocUsuallySwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

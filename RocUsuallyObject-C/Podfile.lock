@@ -16,8 +16,6 @@ PODS:
     - AFNetworking/NSURLSession
   - ARChromeActivity (1.0.5)
   - Baidu-Maps-iOS-SDK (3.0.0)
-  - BeeHive (1.1.0)
-  - CTMediator (0.0.3)
   - CYLTableViewPlaceHolder (1.0.8)
   - DACircularProgress (2.3.1)
   - FrameAccessor (2.0)
@@ -41,12 +39,12 @@ PODS:
   - UICountingLabel (1.2.0)
   - WeexSDK (0.9.5):
     - SocketRocket
+  - WXDevtool (0.9.5):
+    - WeexSDK
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0)
   - Baidu-Maps-iOS-SDK (~> 3.0.0)
-  - BeeHive (~> 1.1.0)
-  - CTMediator (~> 0.0.3)
   - CYLTableViewPlaceHolder
   - DACircularProgress (~> 2.3.1)
   - FrameAccessor
@@ -61,6 +59,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.6)
   - STAlertView (~> 1.0.0)
   - WeexSDK (from `./sdk/`)
+  - WXDevtool (~> 0.9.5)
 
 EXTERNAL SOURCES:
   WeexSDK:
@@ -70,8 +69,6 @@ SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   ARChromeActivity: 821c7849b566f49583987468733a896fee35aa4d
   Baidu-Maps-iOS-SDK: 9aafd9643ee1db4cac04a90ab7290db6c116b46a
-  BeeHive: 9c298306303342fb5c7edc23f29850c2f46b4f70
-  CTMediator: c9a1203561e2232cb9a72822659159a02ae3cf20
   CYLTableViewPlaceHolder: 44075c119aab78bbc514c75d771d6565e19938e8
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FrameAccessor: 443a13e58e23a10ff22180da0897b28c3f6abf66
@@ -89,7 +86,8 @@ SPEC CHECKSUMS:
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   WeexSDK: 1deeace52d35cc976a0cf88409d13a650dfaf33e
+  WXDevtool: 5135a5c6f4426fb635babb9eacfa14352bc66dc6
 
-PODFILE CHECKSUM: 9aea81c56cef92360fcf275265889d422facb166
+PODFILE CHECKSUM: 0530adb294886f8492165322687b3a2344d7ea46
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

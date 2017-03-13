@@ -10,10 +10,9 @@
 
 #import "WXImgLoaderDefaultImpl.h"
 #import "WXEventModule.h"
-#import "WXEventModule.h"
-#import "WXSyncTestModule.h"
+ #import "WXSyncTestModule.h"
 #import "PXWeexEventModule.h"
-
+#import <TBWXDevTool/WXDevTool.h>
 @implementation AppDelegate (Register)
 
 -(void)registerWeex{
@@ -32,15 +31,16 @@
     [WXSDKEngine registerModule:@"pxevent" withClass:[PXWeexEventModule class]];
     
     [WXSDKEngine registerComponent:@"radia" withClass:NSClassFromString(@"PXRadialMenuComponet")];
-    
-//    [WXSDKEngine registerComponent:@"image" withClass:NSClassFromString(@"WXImageComponent")];
+    [WXSDKEngine registerModule:@"homeEvent" withClass:[WXEventModule class]];
 
-    
 #if !(TARGET_IPHONE_SIMULATOR)
 //    [self checkUpdate];
 #endif
     
 #ifdef DEBUG
+//    [WXDevTool setDebug:YES];
+    [WXDevTool launchDevToolDebugWithUrl:@"ws://192.168.0.123:8088/debugProxy/native"];
+
 //    [self atAddPlugin];
     [WXDebugTool setDebug:YES];
     [WXLog setLogLevel:WXLogLevelLog];
