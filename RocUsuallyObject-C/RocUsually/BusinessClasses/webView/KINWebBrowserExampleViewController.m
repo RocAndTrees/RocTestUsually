@@ -33,9 +33,6 @@
 
 #import "KINWebBrowserExampleViewController.h"
 
-#import "RocUsually-Bridging-Header.h"
-#import "RocUsually-Swift.h"
-
 
 @interface KINWebBrowserExampleViewController ()
 
@@ -60,8 +57,8 @@ static NSString *const defaultAddress = @"https://www.apple.com";
     
     self.navigationItem.title = @"";
     
-    [self.navigationController setToolbarHidden:YES];
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setToolbarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
     
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.toolbar.translucent = YES;

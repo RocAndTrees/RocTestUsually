@@ -11,7 +11,7 @@
 //----自定义 view
 #import "XTNetReloader.h"
 #import "WeChatStylePlaceHolder.h"
-
+#import "RocUsually-Swift.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
@@ -43,7 +43,9 @@
                        @"GPSTestViewController",
                        @"WeexViewController",
                        @"ScrollViewAutolayout",
-                       @"CustomViewController",nil];
+                       @"CustomViewController",
+                       @"LXSWebViewController",
+                       nil];
     
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -69,6 +71,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *controllerName = [self.dataSource objectAtIndex:indexPath.row];
+    if ([controllerName isEqualToString:@"LXSWebViewController"]) {
+        LXSWebViewController * controller = [[LXSWebViewController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+        return;
+    }
+    
+    
     UIViewController *controller = [[NSClassFromString(controllerName) alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
