@@ -10,4 +10,6 @@ pod 'SnapKit', '~> 3.0.2'
 # 网络加载图片 
 pod 'AlamofireImage', '~> 3.0'
 
+pod 'RxSwift',    '~> 3.0'
+pod 'RxCocoa',    '~> 3.0'
 end

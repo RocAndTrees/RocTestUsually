@@ -8,6 +8,8 @@
 //
 
 #import "LXWebViewController.h"
+@class ShareModel;
+#import <Masonry/Masonry.h>
 
 #import "LXWebConfigModule.h"
 #import "WebViewJavascriptBridge.h"
@@ -35,6 +37,11 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @property (nonatomic, strong) NSURL *URLToLaunchWithPermission;
 @property (nonatomic, strong) UIAlertView *externalAppPermissionAlertView;
 
+//----
+@property (nonatomic ,copy) NSString *urlStr;
+@property (nonatomic ,copy) NSString *NavTitle;
+@property (nonatomic , strong) ShareModel *model;
+
 @end
 
 
@@ -47,6 +54,10 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 + (LXWebViewController *)webBrowser { //普通初始化
     LXWebViewController *webBrowserViewController = [LXWebViewController webBrowserWithConfiguration:nil];
+    return webBrowserViewController;
+}
+
++ (LXWebViewController *)webBrowserWithUrlStr:(NSString *)urlStr andNavTitle:(NSString *)navTitle{    LXWebViewController *webBrowserViewController = [[self alloc] initWithUrlStr:urlStr andNavTitle:navTitle andShareInfo:nil];
     return webBrowserViewController;
 }
 
@@ -75,6 +86,16 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 #pragma mark - Initializers
+
+-(instancetype)initWithUrlStr:(NSString *)urlStr andNavTitle:(NSString *)navTitle andShareInfo:(ShareModel *)shareInfoModel
+{
+    _urlStr = urlStr;
+    _NavTitle = navTitle;
+    _model   = shareInfoModel;
+    return [self initWithConfiguration:nil];;
+}
+
+
 - (id)init {
     return [self initWithConfiguration:nil];
 }
@@ -105,6 +126,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 
+
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
@@ -115,14 +138,27 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     
     id webLoad;
     if(self.wkWebView) {
-        [self.wkWebView setFrame:self.view.bounds];
+//        [self.wkWebView setFrame:self.view.bounds];
         [self.wkWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [self.wkWebView setNavigationDelegate:self];
         [self.wkWebView setUIDelegate:self];
         [self.wkWebView setMultipleTouchEnabled:YES];
         [self.wkWebView setAutoresizesSubviews:YES];
+
         [self.wkWebView.scrollView setAlwaysBounceVertical:YES];
         [self.view addSubview:self.wkWebView];
+        [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+
+        }];
+        [self.wkWebView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none';" completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        }];
+
+        self.wkWebView.scrollView.bounces = NO;
+        self.wkWebView.scrollView.showsVerticalScrollIndicator = NO;
+
+        
         webLoad = self.wkWebView;
         //Progress 检测
         [self.wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:KINWebBrowserContext];
@@ -136,6 +172,17 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         [self.uiWebView setScalesPageToFit:YES];
         [self.uiWebView.scrollView setAlwaysBounceVertical:YES];
         [self.view addSubview:self.uiWebView];
+        [self.uiWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.left.right.top.bottom.equalTo(self.view);
+        }];
+        [self.uiWebView stringByEvaluatingJavaScriptFromString:
+         @"document.documentElement.style.webkitUserSelect='none';"];
+        
+        self.uiWebView.scrollView.bounces = NO;
+        self.uiWebView.scrollView.showsVerticalScrollIndicator = NO;
+
+        
         webLoad = self.uiWebView;
     }
     
@@ -144,6 +191,32 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     [self.progressView setFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height-self.progressView.frame.size.height, self.view.frame.size.width, self.progressView.frame.size.height)];
     [self.progressView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin];
 
+    
+    if (_urlStr && _NavTitle) {
+        [self loadURLString:_urlStr];
+        self.title = _NavTitle;
+    }
+    
+    
+    //    if (_model.url) {
+    //
+    //        ///* "1" 代表发布 "0" 代表未发布   *///
+    //        NSString *isReleased = [NSString stringWithFormat:@"%@",KgetUserValueByParaName(HCisReleased)];
+    //        NSString* mobile = KgetUserValueByParaName(HCmobile);
+    //        if ([isReleased isEqualToString:@"1"]
+    //            && ![mobile isEqualToString:@"13064795625"]) {
+    //            @weakify(self);
+    //            self.sc_navigationItem.rightBarButtonItem = [[SCBarButtonItem alloc]initWithTitle:@"分享" style:SCBarButtonItemStylePlain handler:^(id sender) {
+    //                @strongify(self);
+    //
+    //                [YHJHelp showShareInController:self andShareURL:[NSString stringWithFormat:@"%@%@",_model.url,KgetUserValueByParaName(USERID)] andTitle:_model.title andShareText:_model.content andShareImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_model.logo]]]];
+    //
+    //            }];
+    //        }
+    //        
+    //    }
+
+    
     //---- WebViewJavascriptBridge
     [WebViewJavascriptBridge enableLogging];
     
@@ -152,10 +225,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     //---分享
     [self.bridge registerHandler:@"share" handler:^(id data, WVJBResponseCallback responseCallback) {
         responseCallback(@"ok");
-        
+//        [self shareWithWebDataAction:data];
+
     }];
 
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -307,7 +382,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)loadURLString:(NSString *)URLString {
-    NSURL *URL = [NSURL URLWithString:URLString];
+    
+    NSURL *URL = [NSURL URLWithString:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self loadURL:URL];
 }
 
@@ -339,6 +415,38 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 #pragma mark - ---- private methods 🍊
+-(void)shareWithWebDataAction:(NSDictionary*)dataDic{
+    if (dataDic) {
+        //        [YHJHelp showShareInController:self andShareURL:[NSString stringWithFormat:@"%@",[dataDic objectForKey:@"url"]] andTitle:[dataDic objectForKey:@"title"] andShareText:[dataDic objectForKey:@"content"] andShareImage:[self getImageFromURL:[dataDic objectForKey:@"imageurl"]]];
+    }
+}
+
+-(UIImage *) getImageFromURL:(NSString *)fileURL {
+    NSLog(@"执行图片下载函数");
+    //    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
+    //    dispatch_async(globalQueue, ^{
+    //        UIImage * result;
+    //
+    //        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
+    //        result = [UIImage imageWithData:data];
+    //
+    //        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    //        dispatch_async(mainQueue, ^{
+    //            return result;
+    //        });
+    //    });
+    UIImage * result;
+    
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
+    result = [UIImage imageWithData:data];
+    
+    return result;
+}
+
+
+
+
+
 #pragma mark - Toolbar State
 
 /**
@@ -447,6 +555,11 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if(webView == self.uiWebView) {
+        [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+        [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+
+        //    [MBProgressHUD hideHUDForView:_web animated:YES];
+
         if(!self.uiWebView.isLoading) {
             self.uiWebViewIsLoading = NO;
             [self updateToolbarState];
@@ -478,6 +591,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     if(webView == self.wkWebView) {
+        //    [MBProgressHUD showHUDAddedTo:_web animated:YES];
         [self updateToolbarState];
         if([self.delegate respondsToSelector:@selector(webBrowser:didStartLoadingURL:)]) {
             [self.delegate webBrowser:self didStartLoadingURL:self.wkWebView.URL];
@@ -488,7 +602,14 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     if(webView == self.wkWebView) {
         [self updateToolbarState];
-        if([self.delegate respondsToSelector:@selector(webBrowser:didFinishLoadingURL:)]) {
+        //    [MBProgressHUD hideHUDForView:_web animated:YES];
+        [webView evaluateJavaScript:@"document.documentElement.style.webkitUserSelect='none';" completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        }];
+        [webView evaluateJavaScript:@"document.documentElement.style.webkitTouchCallout='none';" completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        }];
+
+        if([self.delegate respondsToSelector:@selector(webBrowser:didFinishLoadingURL:)])
+        {
             [self.delegate webBrowser:self didFinishLoadingURL:self.wkWebView.URL];
         }
     }

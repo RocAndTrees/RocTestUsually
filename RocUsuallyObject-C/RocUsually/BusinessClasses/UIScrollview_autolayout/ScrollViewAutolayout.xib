@@ -22,8 +22,8 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l80-DR-L9y">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="801"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-Jq-3kK">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-Jq-3kK">
+                            <rect key="frame" x="-131" y="-169" width="375" height="800"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCC-KA-99A">
                                     <rect key="frame" x="42" y="34" width="46" height="30"/>

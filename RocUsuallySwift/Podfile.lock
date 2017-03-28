@@ -2,12 +2,17 @@ PODS:
   - Alamofire (4.2.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
   - SnapKit (3.0.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireImage (~> 3.0)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - SnapKit (~> 3.0.2)
   - SwiftyJSON (from `https://github.com/IBM-Swift/SwiftyJSON.git`)
 
@@ -23,9 +28,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: b7ef8df7124b95e00f4ea28698ca1f146560f1e9
+PODFILE CHECKSUM: c259f65cdf94a2b4eb0d90f2a857308ea4026224
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

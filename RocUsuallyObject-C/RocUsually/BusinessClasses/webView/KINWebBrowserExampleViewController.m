@@ -40,6 +40,7 @@
 
 static NSString *const defaultAddress = @"https://www.apple.com";
 
+static NSString *const defaultAddress1 = @"http://api.ybzg.com/CloudParking/web/price/yunbi.php?userid=7003";
 @implementation KINWebBrowserExampleViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -95,11 +96,12 @@ static NSString *const defaultAddress = @"https://www.apple.com";
 #pragma mark - IBActions
 
 - (IBAction)pushButtonPressed:(id)sender {
-    LXWebViewController *webBrowser = [LXWebViewController webBrowser];
+//    LXWebViewController *webBrowser = [LXWebViewController webBrowser];
+    LXWebViewController * webBrowser = [LXWebViewController webBrowserWithUrlStr:defaultAddress andNavTitle:@"流量送到家"];
     [webBrowser setDelegate:self];
-    webBrowser.title = @"流量送到家";
+//    webBrowser.title = @"流量送到家";
     [self.navigationController pushViewController:webBrowser animated:YES];
-    [webBrowser loadURLString:defaultAddress];
+//    [webBrowser loadURLString:defaultAddress];
 }
 
 //presentButtonPressed 情况下

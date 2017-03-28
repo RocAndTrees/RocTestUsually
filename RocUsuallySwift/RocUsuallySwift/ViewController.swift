@@ -21,13 +21,11 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside);
         
         viewDidAppear1(go: true)
-        
-        
     }
     
     func buttonAction() {
         print("buttonAction");
-        self.navigationController?.pushViewController(ABCViewController(), animated: true)
+        self.navigationController?.pushViewController(RCWebViewController(), animated: true)
     }
     
     func viewDidAppear1(go animated: Bool) {

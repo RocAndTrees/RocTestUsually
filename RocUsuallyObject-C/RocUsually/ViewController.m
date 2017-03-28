@@ -82,4 +82,28 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+
+-(void)test{
+//    NSString *someString = @"hello world";
+//    NSNumber *floatNumber = @2.5f;
+//    NSNumber * doubleNumber= @3.12546;
+//    NSNumber *boolNumber = @YES;
+//    NSNumber *charNumber = @'A';
+//    int x = 5;
+//    float y = 6.755;
+//    NSNumber *expressionNumber = @(x * y);
+//    NSArray *array = @[@"1", @"2", @"3"];
+//    NSString *number1 = array[0];
+//    NSDictionary *dictionary = @{@"1":@"123123", @"11":@"123"};
+//    NSString *dicString = dictionary[@"1"];
+    #define ANIMATION_DURATION 03
+    static const NSTimeInterval kANimationDuration = 0.3;
+    
+    
+
+
+    
+    
+    
+}
 @end

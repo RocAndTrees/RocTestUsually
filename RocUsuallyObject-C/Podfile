@@ -8,7 +8,9 @@ target 'RocUsually' do
     #pod 'UtilityOC',:Git=>"https://Rocfly@bitbucket.org/Rocfly/rputilityocspecs.git"
 
 #pod 'MyLib', '~> 0.1.0'
+
 #pod 'LXGpsManager', :git => 'https://Rocfly@bitbucket.org/Rocfly/lxgpsmanage.git', :tag => '0.1.4'
+
 #    pod 'LXGpsManager', '~> 0.1.2'
     pod 'WXDevtool', '~> 0.9.5', :configurations => ['Debug']
     pod 'RDVTabBarController', '~> 1.1.9'

@@ -687,8 +687,8 @@
 				C103C51C1E6FDB940009D38E /* LXWebConfigModule.h */,
 				C103C51D1E6FDB940009D38E /* LXWebConfigModule.m */,
 				C15C4F631E76353B003606FE /* LXSWebViewController.swift */,
-				C15C4F621E76353B003606FE /* RocUsually-Bridging-Header.h */,
 				C15C4F651E763738003606FE /* test1.swift */,
+				C15C4F621E76353B003606FE /* RocUsually-Bridging-Header.h */,
 			);
 			path = WebControllerModule;
 			sourceTree = "<group>";

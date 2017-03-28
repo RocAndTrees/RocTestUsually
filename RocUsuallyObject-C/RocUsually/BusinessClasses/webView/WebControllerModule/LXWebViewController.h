@@ -68,6 +68,7 @@
 
 + (LXWebViewController *)webBrowser ;
 + (LXWebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration NS_AVAILABLE_IOS(8_0);
++ (LXWebViewController *)webBrowserWithUrlStr:(NSString *)urlStr andNavTitle:(NSString *)navTitle;
 
 /*
  Initialize a UINavigationController with a LXWebViewController for modal presentation.
