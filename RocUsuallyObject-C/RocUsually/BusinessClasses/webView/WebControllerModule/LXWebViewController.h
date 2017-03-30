@@ -40,7 +40,7 @@
  For convenience, two sets of static initializers are available.
  
  */
-@interface LXWebViewController : UIViewController <WKNavigationDelegate, WKUIDelegate, UIWebViewDelegate>
+@interface LXWebViewController : UIViewController <WKNavigationDelegate, WKUIDelegate>
 
 #pragma mark - Public Properties
 
@@ -52,7 +52,7 @@
 // The web views
 // Depending on the version of iOS, one of these will be set
 @property (nonatomic, strong) WKWebView *wkWebView;
-@property (nonatomic, strong) UIWebView *uiWebView;
+
 
 - (id)initWithConfiguration:(WKWebViewConfiguration *)configuration NS_AVAILABLE_IOS(8_0);
 
@@ -69,17 +69,6 @@
 + (LXWebViewController *)webBrowser ;
 + (LXWebViewController *)webBrowserWithConfiguration:(WKWebViewConfiguration *)configuration NS_AVAILABLE_IOS(8_0);
 + (LXWebViewController *)webBrowserWithUrlStr:(NSString *)urlStr andNavTitle:(NSString *)navTitle;
-
-/*
- Initialize a UINavigationController with a LXWebViewController for modal presentation.
- 
- Ideal for use with presentViewController:animated:
- 
- Optionally specify KINWebBrowser options or WKWebConfiguration
- */
-
-+ (UINavigationController *)navigationControllerWithWebBrowser;
-+ (UINavigationController *)navigationControllerWithWebBrowserWithConfiguration:(WKWebViewConfiguration *)configuration NS_AVAILABLE_IOS(8_0);
 
 
 @property (nonatomic, strong) UIBarButtonItem *actionButton;

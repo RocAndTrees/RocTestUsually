@@ -31,13 +31,10 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @property (nonatomic, strong) NSTimer *fakeProgressTimer;
 @property (nonatomic, strong) UIPopoverController *actionPopoverController;
 
-@property (nonatomic, assign) BOOL uiWebViewIsLoading;
-
-@property (nonatomic, strong) NSURL *uiWebViewCurrentURL;
 @property (nonatomic, strong) NSURL *URLToLaunchWithPermission;
 @property (nonatomic, strong) UIAlertView *externalAppPermissionAlertView;
 
-//----
+///----  Initializers property
 @property (nonatomic ,copy) NSString *urlStr;
 @property (nonatomic ,copy) NSString *NavTitle;
 @property (nonatomic , strong) ShareModel *model;
@@ -66,24 +63,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     return webBrowserViewController;
 }
 
-+ (UINavigationController *)navigationControllerWithWebBrowser {
-    LXWebViewController *webBrowserViewController = [[self alloc] initWithConfiguration:nil];
-    return [LXWebViewController navigationControllerWithBrowser:webBrowserViewController];
-}
-
-+ (UINavigationController *)navigationControllerWithWebBrowserWithConfiguration:(WKWebViewConfiguration *)configuration {
-    LXWebViewController *webBrowserViewController = [[self alloc] initWithConfiguration:configuration];
-    return [LXWebViewController navigationControllerWithBrowser:webBrowserViewController];
-}
-
-//private 初始化-- navigationController
-+ (UINavigationController *)navigationControllerWithBrowser:(LXWebViewController *)webBrowser {
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:webBrowser action:@selector(doneButtonPressed:)];
-    [webBrowser.navigationItem setRightBarButtonItem:doneButton];
-    
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:webBrowser];
-    return navigationController;
-}
 
 #pragma mark - Initializers
 
@@ -103,17 +82,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 - (id)initWithConfiguration:(WKWebViewConfiguration *)configuration {
     self = [super init];
     if(self) {
-        if([WKWebView class]) { // 判断是否含有这个类
-            if(configuration) {
+             if(configuration) {
                 self.wkWebView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
             }
             else {
                 self.wkWebView = [[WKWebView alloc] init];
             }
-        }
-        else {
-            self.uiWebView = [[UIWebView alloc] init];
-        }
         
         self.actionButtonHidden = NO;
         self.showsURLInNavigationBar = NO;
@@ -138,8 +112,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     
     id webLoad;
     if(self.wkWebView) {
-//        [self.wkWebView setFrame:self.view.bounds];
-        [self.wkWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+         [self.wkWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         [self.wkWebView setNavigationDelegate:self];
         [self.wkWebView setUIDelegate:self];
         [self.wkWebView setMultipleTouchEnabled:YES];
@@ -162,28 +135,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         webLoad = self.wkWebView;
         //Progress 检测
         [self.wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:0 context:KINWebBrowserContext];
-    }
-    else if(self.uiWebView) {
-        [self.uiWebView setFrame:self.view.bounds];
-        [self.uiWebView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-        [self.uiWebView setDelegate:self];
-        [self.uiWebView setMultipleTouchEnabled:YES];
-        [self.uiWebView setAutoresizesSubviews:YES];
-        [self.uiWebView setScalesPageToFit:YES];
-        [self.uiWebView.scrollView setAlwaysBounceVertical:YES];
-        [self.view addSubview:self.uiWebView];
-        [self.uiWebView mas_makeConstraints:^(MASConstraintMaker *make) {
-            
-            make.left.right.top.bottom.equalTo(self.view);
-        }];
-        [self.uiWebView stringByEvaluatingJavaScriptFromString:
-         @"document.documentElement.style.webkitUserSelect='none';"];
-        
-        self.uiWebView.scrollView.bounces = NO;
-        self.uiWebView.scrollView.showsVerticalScrollIndicator = NO;
-
-        
-        webLoad = self.uiWebView;
     }
     
     self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
@@ -250,12 +201,10 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     [self.navigationController setNavigationBarHidden:self.previousNavigationControllerNavigationBarHidden animated:animated];
     [self.navigationController setToolbarHidden:self.previousNavigationControllerToolbarHidden animated:animated];
     
-    [self.uiWebView setDelegate:nil];
-    [self.progressView removeFromSuperview];
+     [self.progressView removeFromSuperview];
 }
 #pragma mark - Dealloc
 - (void)dealloc {
-    [self.uiWebView setDelegate:nil];
     
     [self.wkWebView setNavigationDelegate:nil];
     [self.wkWebView setUIDelegate:nil];
@@ -291,41 +240,22 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     if(self.wkWebView) {
         [self.wkWebView goBack];
     }
-    else if(self.uiWebView) {
-        [self.uiWebView goBack];
-    }
-    [self updateToolbarState];
+     [self updateToolbarState];
 }
 
 - (void)forwardButtonPressed:(id)sender {
-    if(self.wkWebView) {
-        [self.wkWebView goForward];
-    }
-    else if(self.uiWebView) {
-        [self.uiWebView goForward];
-    }
-    [self updateToolbarState];
+         [self.wkWebView goForward];
+      [self updateToolbarState];
 }
 
 - (void)refreshButtonPressed:(id)sender {
-    if(self.wkWebView) {
-        [self.wkWebView stopLoading];
+         [self.wkWebView stopLoading];
         [self.wkWebView reload];
-    }
-    else if(self.uiWebView) {
-        [self.uiWebView stopLoading];
-        [self.uiWebView reload];
-    }
-}
+  }
 
 - (void)stopButtonPressed:(id)sender {
-    if(self.wkWebView) {
-        [self.wkWebView stopLoading];
-    }
-    else if(self.uiWebView) {
-        [self.uiWebView stopLoading];
-    }
-}
+         [self.wkWebView stopLoading];
+ }
 
 - (void)actionButtonPressed:(id)sender {
     NSURL *URLForActivityItem;
@@ -333,10 +263,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     if(self.wkWebView) {
         URLForActivityItem = self.wkWebView.URL;
         URLTitle = self.wkWebView.title;
-    }
-    else if(self.uiWebView) {
-        URLForActivityItem = self.uiWebView.request.URL;
-        URLTitle = [self.uiWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
     }
     if (URLForActivityItem) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -369,12 +295,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 #pragma mark - Public Interface
 - (void)loadRequest:(NSURLRequest *)request {
-    if(self.wkWebView) {
-        [self.wkWebView loadRequest:request];
-    }
-    else if(self.uiWebView) {
-        [self.uiWebView loadRequest:request];
-    }
+    [self.wkWebView loadRequest:request];
 }
 
 - (void)loadURL:(NSURL *)URL {
@@ -382,18 +303,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)loadURLString:(NSString *)URLString {
-    
     NSURL *URL = [NSURL URLWithString:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self loadURL:URL];
 }
 
 - (void)loadHTMLString:(NSString *)HTMLString {
-    if(self.wkWebView) {
-        [self.wkWebView loadHTMLString:HTMLString baseURL:nil];
-    }
-    else if(self.uiWebView) {
-        [self.uiWebView loadHTMLString:HTMLString baseURL:nil];
-    }
+    [self.wkWebView loadHTMLString:HTMLString baseURL:nil];
 }
 
 - (void)setTintColor:(UIColor *)tintColor {
@@ -421,40 +336,14 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     }
 }
 
--(UIImage *) getImageFromURL:(NSString *)fileURL {
-    NSLog(@"执行图片下载函数");
-    //    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
-    //    dispatch_async(globalQueue, ^{
-    //        UIImage * result;
-    //
-    //        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    //        result = [UIImage imageWithData:data];
-    //
-    //        dispatch_queue_t mainQueue = dispatch_get_main_queue();
-    //        dispatch_async(mainQueue, ^{
-    //            return result;
-    //        });
-    //    });
-    UIImage * result;
-    
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
-    result = [UIImage imageWithData:data];
-    
-    return result;
-}
-
-
-
-
-
 #pragma mark - Toolbar State
 
 /**
  更新ToolBar 状态
  */
 - (void)updateToolbarState {
-    BOOL canGoBack = self.wkWebView.canGoBack || self.uiWebView.canGoBack;
-    BOOL canGoForward = self.wkWebView.canGoForward || self.uiWebView.canGoForward;
+    BOOL canGoBack = self.wkWebView.canGoBack;
+    BOOL canGoForward = self.wkWebView.canGoForward;
     
     [self.backButton setEnabled:canGoBack];
     [self.forwardButton setEnabled:canGoForward];
@@ -464,17 +353,14 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
     }
     
     NSArray *barButtonItems;
-    if(self.wkWebView.loading || self.uiWebViewIsLoading) {
+    if(self.wkWebView.loading) {
         barButtonItems = @[self.backButton, self.fixedSeparator, self.forwardButton, self.fixedSeparator, self.stopButton, self.flexibleSeparator];
         
         if(self.showsURLInNavigationBar) {
             NSString *URLString;
-            if(self.wkWebView) {
+            
                 URLString = [self.wkWebView.URL absoluteString];
-            }
-            else if(self.uiWebView) {
-                URLString = [self.uiWebViewCurrentURL absoluteString];
-            }
+            
             
             URLString = [URLString stringByReplacingOccurrencesOfString:@"http://" withString:@""];
             URLString = [URLString stringByReplacingOccurrencesOfString:@"https://" withString:@""];
@@ -486,12 +372,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         barButtonItems = @[self.backButton, self.fixedSeparator, self.forwardButton, self.fixedSeparator, self.refreshButton, self.flexibleSeparator];
         
         if(self.showsPageTitleInNavigationBar) {
-            if(self.wkWebView) {
+            
                 self.navigationItem.title = self.wkWebView.title;
-            }
-            else if(self.uiWebView) {
-                self.navigationItem.title = [self.uiWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
-            }
         }
     }
     
@@ -528,64 +410,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 #pragma mark - ---- delegate 🍎
-#pragma mark - UIWebViewDelegate
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if(webView == self.uiWebView) {
-        
-        if([LXWebConfigModule externalAppRequiredToOpenURL:request.URL]) {
-            self.uiWebViewCurrentURL = request.URL;
-            self.uiWebViewIsLoading = YES;
-            [self updateToolbarState];
-            
-            [self fakeProgressViewStartLoading];
-            
-            if([self.delegate respondsToSelector:@selector(webBrowser:didStartLoadingURL:)]) {
-                [self.delegate webBrowser:self didStartLoadingURL:request.URL];
-            }
-            return YES;
-        }
-        else {
-            [self launchExternalAppWithURL:request.URL];
-            return NO;
-        }
-    }
-    return NO;
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    if(webView == self.uiWebView) {
-        [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
-        [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
-
-        //    [MBProgressHUD hideHUDForView:_web animated:YES];
-
-        if(!self.uiWebView.isLoading) {
-            self.uiWebViewIsLoading = NO;
-            [self updateToolbarState];
-            
-            [self fakeProgressBarStopLoading];
-        }
-        
-        if([self.delegate respondsToSelector:@selector(webBrowser:didFinishLoadingURL:)]) {
-            [self.delegate webBrowser:self didFinishLoadingURL:self.uiWebView.request.URL];
-        }
-    }
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    if(webView == self.uiWebView) {
-        if(!self.uiWebView.isLoading) {
-            self.uiWebViewIsLoading = NO;
-            [self updateToolbarState];
-            
-            [self fakeProgressBarStopLoading];
-        }
-        if([self.delegate respondsToSelector:@selector(webBrowser:didFailToLoadURL:error:)]) {
-            [self.delegate webBrowser:self didFailToLoadURL:self.uiWebView.request.URL error:error];
-        }
-    }
-}
 
 #pragma mark - WKNavigationDelegate
 
@@ -704,44 +528,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 
-#pragma mark - Fake Progress Bar Control (UIWebView)
-
-- (void)fakeProgressViewStartLoading {
-    [self.progressView setProgress:0.0f animated:NO];
-    [self.progressView setAlpha:1.0f];
-    
-    if(!self.fakeProgressTimer) {
-        self.fakeProgressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(fakeProgressTimerDidFire:) userInfo:nil repeats:YES];
-    }
-}
-
-- (void)fakeProgressBarStopLoading {
-    if(self.fakeProgressTimer) {
-        [self.fakeProgressTimer invalidate];
-    }
-    
-    if(self.progressView) {
-        [self.progressView setProgress:1.0f animated:YES];
-        // Once complete, fade out UIProgressView
-        // 走通后 渐变 隐藏 UIProgressView
-        [UIView animateWithDuration:0.3f delay:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
-            [self.progressView setAlpha:0.0f];
-        } completion:^(BOOL finished) {
-            [self.progressView setProgress:0.0f animated:NO];
-        }];
-    }
-}
-
-- (void)fakeProgressTimerDidFire:(id)sender {
-    CGFloat increment = 0.005/(self.progressView.progress + 0.2);
-    if([self.uiWebView isLoading]) {
-        CGFloat progress = (self.progressView.progress < 0.75f) ? self.progressView.progress + increment : self.progressView.progress + 0.0005;
-        if(self.progressView.progress < 0.95) {
-            [self.progressView setProgress:progress animated:YES];
-        }
-    }
-}
-
 #pragma mark - External App Support
 
 - (void)launchExternalAppWithURL:(NSURL *)URL {
@@ -756,13 +542,13 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 #pragma mark - Interface Orientation
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskAllButUpsideDown;
-}
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationMaskAllButUpsideDown;
+//}
 
-- (BOOL)shouldAutorotate {
-    return YES;
-}
+//- (BOOL)shouldAutorotate {
+//    return YES;
+//}
 
 @end
 

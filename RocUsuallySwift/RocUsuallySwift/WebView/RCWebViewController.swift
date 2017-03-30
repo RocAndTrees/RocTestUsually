@@ -47,7 +47,7 @@ extension RCWebViewController{
     func loadURLString(urlString:String){
         let urlStr = urlString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         
-        let url: NSURL = NSURL(string: urlStr!)!
+       // let url: NSURL = NSURL(string: urlStr!)!
     }
 
     

@@ -38,13 +38,13 @@
     self.dataSource = [NSMutableArray arrayWithObjects:
                        @"PlaceViewController",
                        @"LoginViewController",
-                       @"Demo3DTouchViewController"
-                       ,@"KINWebBrowserExampleViewController",
+                       @"Demo3DTouchViewController",
+                       @"KINWebBrowserExampleViewController",
                        @"GPSTestViewController",
                        @"WeexViewController",
                        @"ScrollViewAutolayout",
                        @"CustomViewController",
-                       @"LXSWebViewController",
+                       @"LXWebViewController",
                        nil];
     
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -71,7 +71,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *controllerName = [self.dataSource objectAtIndex:indexPath.row];
-    if ([controllerName isEqualToString:@"LXSWebViewController"]) {
+//    if ([controllerName isEqualToString:@"LXSWebViewController"]) {
+//        LXSWebViewController * controller = [[LXSWebViewController alloc] init];
+//        [self.navigationController pushViewController:controller animated:YES];
+//        return;
+//    }
+    if ([controllerName isEqualToString:@"LXWebViewController"]) {
         LXSWebViewController * controller = [[LXSWebViewController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
         return;
@@ -96,14 +101,8 @@
 //    NSString *number1 = array[0];
 //    NSDictionary *dictionary = @{@"1":@"123123", @"11":@"123"};
 //    NSString *dicString = dictionary[@"1"];
-    #define ANIMATION_DURATION 03
-    static const NSTimeInterval kANimationDuration = 0.3;
-    
-    
-
-
-    
-    
+//    #define ANIMATION_DURATION 03
+//    static const NSTimeInterval kANimationDuration = 0.3;
     
 }
 @end

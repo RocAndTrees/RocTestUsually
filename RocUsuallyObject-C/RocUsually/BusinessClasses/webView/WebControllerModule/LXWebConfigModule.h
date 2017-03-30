@@ -25,6 +25,6 @@
 
 //---业务类
 
-
++(UIImage *) getImageFromURL:(NSString *)fileURL;
 
 @end
