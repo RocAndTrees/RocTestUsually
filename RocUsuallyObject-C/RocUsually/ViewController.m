@@ -11,7 +11,7 @@
 //----自定义 view
 #import "XTNetReloader.h"
 #import "WeChatStylePlaceHolder.h"
-#import "RocUsually-Swift.h"
+//#import "RocUsually-Swift.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
@@ -45,6 +45,7 @@
                        @"ScrollViewAutolayout",
                        @"CustomViewController",
                        @"LXWebViewController",
+                       @"MVVMViewController",
                        nil];
     
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -77,9 +78,8 @@
 //        return;
 //    }
     if ([controllerName isEqualToString:@"LXWebViewController"]) {
-        LXSWebViewController * controller = [[LXSWebViewController alloc] init];
-        [self.navigationController pushViewController:controller animated:YES];
-        return;
+
+    
     }
     
     

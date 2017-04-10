@@ -30,6 +30,7 @@ PODS:
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
   - RDVTabBarController (1.1.9)
+  - ReactiveObjC (2.1.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - MJRefresh
   - PNChart (~> 0.8.9)
   - RDVTabBarController (~> 1.1.9)
+  - ReactiveObjC (~> 2.1.2)
   - SDWebImage (~> 3.6)
   - STAlertView (~> 1.0.0)
   - WeexSDK (from `./sdk/`)
@@ -80,6 +82,7 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   STAlertView: bfcbdfed87dc7bfb35c04acd5d96aecebb923d48
@@ -88,6 +91,6 @@ SPEC CHECKSUMS:
   WeexSDK: 1deeace52d35cc976a0cf88409d13a650dfaf33e
   WXDevtool: 5135a5c6f4426fb635babb9eacfa14352bc66dc6
 
-PODFILE CHECKSUM: 0530adb294886f8492165322687b3a2344d7ea46
+PODFILE CHECKSUM: 76a72351a6027bd13500327b324a06456631398a
 
 COCOAPODS: 1.2.0

@@ -28,6 +28,9 @@ target 'RocUsually' do
     pod 'Baidu-Maps-iOS-SDK', '~> 3.0.0'
     pod 'WeexSDK', :path=>'./sdk/'
     pod 'PNChart', '~> 0.8.9'
+    
+    pod 'ReactiveObjC', '~> 2.1.2'
+
 
 #    pod 'BaiduMapKit', '~> 3.2.1'
 #pod 'ReactiveCocoa', '~> 5.0.0'
