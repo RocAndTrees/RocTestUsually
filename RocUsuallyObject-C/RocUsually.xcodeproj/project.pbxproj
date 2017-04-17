@@ -393,11 +393,11 @@
 		C167A6221E9BA0C8000D7A61 /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C167A6AB1E9BA475000D7A61 /* MVVM.md */,
 				C167A6A81E9BA45F000D7A61 /* Model */,
 				C167A6A91E9BA45F000D7A61 /* View */,
 				C167A6AA1E9BA45F000D7A61 /* ViewModel */,
 				C167A6231E9BA0C8000D7A61 /* Controller */,
-				C167A6AB1E9BA475000D7A61 /* MVVM.md */,
 			);
 			path = MVVMDemo;
 			sourceTree = "<group>";

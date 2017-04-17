@@ -20,11 +20,29 @@
 		C167A6D11E9BA8B3000D7A61 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6C41E9BA8B3000D7A61 /* UIColor-Extension.swift */; };
 		C167A6D21E9BA8B3000D7A61 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6CC1E9BA8B3000D7A61 /* NetWorkTools.swift */; };
 		C167A6D31E9BA8B3000D7A61 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6CE1E9BA8B3000D7A61 /* Common.swift */; };
+		C167A6D61E9BAA14000D7A61 /* RxSwiftDemo.md in Sources */ = {isa = PBXBuildFile; fileRef = C167A6D51E9BAA14000D7A61 /* RxSwiftDemo.md */; };
+		C167A6D81E9BAA22000D7A61 /* ChartsDemo.md in Sources */ = {isa = PBXBuildFile; fileRef = C167A6D71E9BAA22000D7A61 /* ChartsDemo.md */; };
+		C167A6DD1E9BAAA8000D7A61 /* PXLChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6DC1E9BAAA8000D7A61 /* PXLChartsViewController.swift */; };
+		C167A6DF1E9BB0C3000D7A61 /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6DE1E9BB0C3000D7A61 /* NSObject-Extension.swift */; };
+		C167A6E51E9C66B9000D7A61 /* LineChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6E41E9C66B9000D7A61 /* LineChartController.swift */; };
+		C167A6FE1E9DCEAF000D7A61 /* BoxueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C167A6FD1E9DCEAF000D7A61 /* BoxueViewController.swift */; };
+		C167A7001E9DD1FA000D7A61 /* Boxue_7.md in Sources */ = {isa = PBXBuildFile; fileRef = C167A6FF1E9DD1FA000D7A61 /* Boxue_7.md */; };
 		C18B7CB21E027B8900CFCB25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CB01E027B8900CFCB25 /* Main.storyboard */; };
 		C18B7CB41E027B8900CFCB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CB31E027B8900CFCB25 /* Assets.xcassets */; };
 		C18B7CB71E027B8900CFCB25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18B7CB51E027B8900CFCB25 /* LaunchScreen.storyboard */; };
+		C1F87DBC1EA48E3F00CB85ED /* RocUsuallySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F87DBB1EA48E3F00CB85ED /* RocUsuallySwiftTests.swift */; };
 		F425DC1488C8ED8F9E5A8552 /* Pods_RocUsuallySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8463C2DE5F16054C8D010DF6 /* Pods_RocUsuallySwift.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1F87DBE1EA48E3F00CB85ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18B7CA11E027B8900CFCB25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18B7CA81E027B8900CFCB25;
+			remoteInfo = RocUsuallySwift;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0D145940C13C04F596B95091 /* Pods-RocUsuallySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocUsuallySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocUsuallySwift/Pods-RocUsuallySwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,11 +60,21 @@
 		C167A6C41E9BA8B3000D7A61 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		C167A6CC1E9BA8B3000D7A61 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
 		C167A6CE1E9BA8B3000D7A61 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C167A6D51E9BAA14000D7A61 /* RxSwiftDemo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RxSwiftDemo.md; sourceTree = "<group>"; };
+		C167A6D71E9BAA22000D7A61 /* ChartsDemo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ChartsDemo.md; sourceTree = "<group>"; };
+		C167A6DC1E9BAAA8000D7A61 /* PXLChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXLChartsViewController.swift; sourceTree = "<group>"; };
+		C167A6DE1E9BB0C3000D7A61 /* NSObject-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
+		C167A6E41E9C66B9000D7A61 /* LineChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartController.swift; sourceTree = "<group>"; };
+		C167A6FD1E9DCEAF000D7A61 /* BoxueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxueViewController.swift; sourceTree = "<group>"; };
+		C167A6FF1E9DD1FA000D7A61 /* Boxue_7.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Boxue_7.md; sourceTree = "<group>"; };
 		C18B7CA91E027B8900CFCB25 /* RocUsuallySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocUsuallySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18B7CB11E027B8900CFCB25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C18B7CB31E027B8900CFCB25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C18B7CB61E027B8900CFCB25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C18B7CB81E027B8900CFCB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		C1F87DB91EA48E3F00CB85ED /* RocUsuallySwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocUsuallySwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F87DBB1EA48E3F00CB85ED /* RocUsuallySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocUsuallySwiftTests.swift; sourceTree = "<group>"; };
+		C1F87DBD1EA48E3F00CB85ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDFD5A51058ED1BF865F2709 /* Pods-RocUsuallySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocUsuallySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocUsuallySwift/Pods-RocUsuallySwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +84,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F425DC1488C8ED8F9E5A8552 /* Pods_RocUsuallySwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F87DB61EA48E3F00CB85ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +108,8 @@
 		C13975BD1E889FD800D5DA1E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C167A6FB1E9DCE97000D7A61 /* Boxue */,
+				C167A6D41E9BAA07000D7A61 /* Charts */,
 				C13975BE1E889FD800D5DA1E /* RxSwift */,
 			);
 			path = Classes;
@@ -82,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				C13975BF1E88AB5500D5DA1E /* Login */,
+				C167A6D51E9BAA14000D7A61 /* RxSwiftDemo.md */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -195,6 +233,7 @@
 				C167A6C21E9BA8B3000D7A61 /* NSDate-Extension.swift */,
 				C167A6C31E9BA8B3000D7A61 /* UIBarButtonItem-Extension.swift */,
 				C167A6C41E9BA8B3000D7A61 /* UIColor-Extension.swift */,
+				C167A6DE1E9BB0C3000D7A61 /* NSObject-Extension.swift */,
 			);
 			path = BaseExtension;
 			sourceTree = "<group>";
@@ -258,10 +297,78 @@
 			path = Marco;
 			sourceTree = "<group>";
 		};
+		C167A6D41E9BAA07000D7A61 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				C167A6E21E9C66A1000D7A61 /* OtherController */,
+				C167A6D91E9BAA6D000D7A61 /* Controller */,
+				C167A6DA1E9BAA6D000D7A61 /* Model */,
+				C167A6DB1E9BAA6D000D7A61 /* View */,
+				C167A6D71E9BAA22000D7A61 /* ChartsDemo.md */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		C167A6D91E9BAA6D000D7A61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C167A6DC1E9BAAA8000D7A61 /* PXLChartsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C167A6DA1E9BAA6D000D7A61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C167A6DB1E9BAA6D000D7A61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C167A6E21E9C66A1000D7A61 /* OtherController */ = {
+			isa = PBXGroup;
+			children = (
+				C167A6E31E9C66A1000D7A61 /* 1LineChartController */,
+			);
+			path = OtherController;
+			sourceTree = "<group>";
+		};
+		C167A6E31E9C66A1000D7A61 /* 1LineChartController */ = {
+			isa = PBXGroup;
+			children = (
+				C167A6E41E9C66B9000D7A61 /* LineChartController.swift */,
+			);
+			path = 1LineChartController;
+			sourceTree = "<group>";
+		};
+		C167A6FB1E9DCE97000D7A61 /* Boxue */ = {
+			isa = PBXGroup;
+			children = (
+				C167A6FC1E9DCE97000D7A61 /* Controller */,
+			);
+			path = Boxue;
+			sourceTree = "<group>";
+		};
+		C167A6FC1E9DCE97000D7A61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C167A6FD1E9DCEAF000D7A61 /* BoxueViewController.swift */,
+				C167A6FF1E9DD1FA000D7A61 /* Boxue_7.md */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C18B7CA01E027B8900CFCB25 = {
 			isa = PBXGroup;
 			children = (
 				C18B7CAB1E027B8900CFCB25 /* RocUsuallySwift */,
+				C1F87DBA1EA48E3F00CB85ED /* RocUsuallySwiftTests */,
 				C18B7CAA1E027B8900CFCB25 /* Products */,
 				CE325861FC3A21273291EFAC /* Pods */,
 				2FB4669BE803CC499E4AB8A7 /* Frameworks */,
@@ -272,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				C18B7CA91E027B8900CFCB25 /* RocUsuallySwift.app */,
+				C1F87DB91EA48E3F00CB85ED /* RocUsuallySwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +394,15 @@
 				C18B7CB31E027B8900CFCB25 /* Assets.xcassets */,
 			);
 			path = RocUsuallySwift;
+			sourceTree = "<group>";
+		};
+		C1F87DBA1EA48E3F00CB85ED /* RocUsuallySwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F87DBB1EA48E3F00CB85ED /* RocUsuallySwiftTests.swift */,
+				C1F87DBD1EA48E3F00CB85ED /* Info.plist */,
+			);
+			path = RocUsuallySwiftTests;
 			sourceTree = "<group>";
 		};
 		CE325861FC3A21273291EFAC /* Pods */ = {
@@ -320,13 +437,31 @@
 			productReference = C18B7CA91E027B8900CFCB25 /* RocUsuallySwift.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C1F87DB81EA48E3F00CB85ED /* RocUsuallySwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1F87DC01EA48E3F00CB85ED /* Build configuration list for PBXNativeTarget "RocUsuallySwiftTests" */;
+			buildPhases = (
+				C1F87DB51EA48E3F00CB85ED /* Sources */,
+				C1F87DB61EA48E3F00CB85ED /* Frameworks */,
+				C1F87DB71EA48E3F00CB85ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1F87DBF1EA48E3F00CB85ED /* PBXTargetDependency */,
+			);
+			name = RocUsuallySwiftTests;
+			productName = RocUsuallySwiftTests;
+			productReference = C1F87DB91EA48E3F00CB85ED /* RocUsuallySwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C18B7CA11E027B8900CFCB25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = pxl;
 				TargetAttributes = {
@@ -335,6 +470,12 @@
 						DevelopmentTeam = QD82P77WSG;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+					};
+					C1F87DB81EA48E3F00CB85ED = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = QD82P77WSG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C18B7CA81E027B8900CFCB25;
 					};
 				};
 			};
@@ -352,6 +493,7 @@
 			projectRoot = "";
 			targets = (
 				C18B7CA81E027B8900CFCB25 /* RocUsuallySwift */,
+				C1F87DB81EA48E3F00CB85ED /* RocUsuallySwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -368,6 +510,13 @@
 				C167A6BB1E9BA8A9000D7A61 /* weex-icon.png in Resources */,
 				C18B7CB21E027B8900CFCB25 /* Main.storyboard in Resources */,
 				C13975C31E88AB6800D5DA1E /* RXSwiftLoginController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F87DB71EA48E3F00CB85ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,19 +575,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C167A6DD1E9BAAA8000D7A61 /* PXLChartsViewController.swift in Sources */,
 				C167A6D31E9BA8B3000D7A61 /* Common.swift in Sources */,
 				C167A6B01E9BA6DC000D7A61 /* AppDelegate.swift in Sources */,
 				C167A6D01E9BA8B3000D7A61 /* UIBarButtonItem-Extension.swift in Sources */,
 				C167A6D21E9BA8B3000D7A61 /* NetWorkTools.swift in Sources */,
 				C167A6D11E9BA8B3000D7A61 /* UIColor-Extension.swift in Sources */,
+				C167A6FE1E9DCEAF000D7A61 /* BoxueViewController.swift in Sources */,
+				C167A7001E9DD1FA000D7A61 /* Boxue_7.md in Sources */,
+				C167A6D81E9BAA22000D7A61 /* ChartsDemo.md in Sources */,
 				C13975C21E88AB6800D5DA1E /* RXSwiftLoginController.swift in Sources */,
+				C167A6E51E9C66B9000D7A61 /* LineChartController.swift in Sources */,
+				C167A6DF1E9BB0C3000D7A61 /* NSObject-Extension.swift in Sources */,
 				C13975C51E88AD4500D5DA1E /* InputValidator.swift in Sources */,
+				C167A6D61E9BAA14000D7A61 /* RxSwiftDemo.md in Sources */,
 				C167A6B11E9BA6DC000D7A61 /* ViewController.swift in Sources */,
 				C167A6CF1E9BA8B3000D7A61 /* NSDate-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1F87DB51EA48E3F00CB85ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F87DBC1EA48E3F00CB85ED /* RocUsuallySwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1F87DBF1EA48E3F00CB85ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18B7CA81E027B8900CFCB25 /* RocUsuallySwift */;
+			targetProxy = C1F87DBE1EA48E3F00CB85ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C18B7CB01E027B8900CFCB25 /* Main.storyboard */ = {
@@ -594,6 +766,38 @@
 			};
 			name = Release;
 		};
+		C1F87DC11EA48E3F00CB85ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = QD82P77WSG;
+				INFOPLIST_FILE = RocUsuallySwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rocfly.RocUsuallySwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RocUsuallySwift.app/RocUsuallySwift";
+			};
+			name = Debug;
+		};
+		C1F87DC21EA48E3F00CB85ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = QD82P77WSG;
+				INFOPLIST_FILE = RocUsuallySwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rocfly.RocUsuallySwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RocUsuallySwift.app/RocUsuallySwift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,6 +818,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C1F87DC01EA48E3F00CB85ED /* Build configuration list for PBXNativeTarget "RocUsuallySwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1F87DC11EA48E3F00CB85ED /* Debug */,
+				C1F87DC21EA48E3F00CB85ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,6 +2,9 @@ PODS:
   - Alamofire (4.2.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
@@ -11,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireImage (~> 3.0)
+  - Charts (~> 3.0.1)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SnapKit (~> 3.0.2)
@@ -28,11 +32,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: c259f65cdf94a2b4eb0d90f2a857308ea4026224
+PODFILE CHECKSUM: 8ac7fe89367600d71655e79dbcbbb1ed6e36ca4c
 
 COCOAPODS: 1.2.0

@@ -7,7 +7,6 @@
 //
 
 #import "MVVMViewController.h"
-
 @interface MVVMViewController ()
 
 @end
@@ -18,7 +17,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.title = @"MVVM";
     
 }
 

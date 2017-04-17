@@ -12,4 +12,7 @@ pod 'AlamofireImage', '~> 3.0'
 
 pod 'RxSwift',    '~> 3.0'
 pod 'RxCocoa',    '~> 3.0'
+#图表
+pod 'Charts', '~> 3.0.1'
+
 end
