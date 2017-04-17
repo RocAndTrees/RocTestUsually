@@ -211,17 +211,17 @@ internal struct EasingFunctions
     
     internal static let EaseInSine = { (elapsed: TimeInterval, duration: TimeInterval) -> Double in
         var position: TimeInterval = elapsed / duration
-        return Double( -cos(position * M_PI_2) + 1.0 )
+        return Double( -cos(position * Double.pi / 2) + 1.0 )
     }
     
     internal static let EaseOutSine = { (elapsed: TimeInterval, duration: TimeInterval) -> Double in
         var position: TimeInterval = elapsed / duration
-        return Double( sin(position * M_PI_2) )
+        return Double( sin(position * Double.pi / 2) )
     }
     
     internal static let EaseInOutSine = { (elapsed: TimeInterval, duration: TimeInterval) -> Double in
         var position: TimeInterval = elapsed / duration
-        return Double( -0.5 * (cos(M_PI * position) - 1.0) )
+        return Double( -0.5 * (cos(Double.pi / 2 * position) - 1.0) )
     }
     
     internal static let EaseInExpo = { (elapsed: TimeInterval, duration: TimeInterval) -> Double in

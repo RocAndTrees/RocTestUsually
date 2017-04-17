@@ -33,8 +33,36 @@ class RocUsuallySwiftTests: XCTestCase {
     }
     
     func testBoxueExample(){
-        
+        if true {
+            let boss = Role("boss")
+            let fn = {
+                print("\(boss) takes this action.")
+            }
+            
+            boss.action = fn
+        }
+    
     }
     
     
+}
+
+class Role {
+    var name: String
+    var action: () -> Void = { }
+    
+    init(_ name: String = "Foo") {
+        self.name = name
+        print("\(self) init")
+    }
+    
+    deinit {
+        print("\(self) deinit")
+    }
+}
+
+extension Role: CustomStringConvertible {
+    var description: String {
+        return "<Role: \(name)>"
+    }
 }

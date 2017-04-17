@@ -1,4 +1,5 @@
-platform:ios, '8.0' 
+platform:ios, '8.0'
+inhibit_all_warnings! #消除警告
 use_frameworks!
 target 'RocUsuallySwift' do
 # Alamofire 网络库
